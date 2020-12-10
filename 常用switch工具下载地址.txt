@@ -8,6 +8,7 @@ awoo installer：http://github.com/Huntereb/Awoo-Installer/releases
 Lockpick 导出keys：https://github.com/shchmue/Lockpick/releases
 haku33洗白软件：http://github.com/StarDustCFW/Haku33/releases
 Tinfoil ：http://tinfoil.io/Download
+NHSE动森存档修改器：https://github.com/kwsch/NHSE
 
 es/fs插件：http://github.com/Joonie86/hekate/releases
 EdiZon金手指：http://github.com/WerWolv/EdiZon/releases
