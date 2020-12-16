@@ -7,7 +7,8 @@ linkalho离线链接账户：https://github.com/rdmrocha/linkalho/releases
 awoo installer：http://github.com/Huntereb/Awoo-Installer/releases
 Lockpick 导出keys：https://github.com/shchmue/Lockpick/releases
 haku33洗白软件：http://github.com/StarDustCFW/Haku33/releases
-Tinfoil ：http://tinfoil.io/Download
+Tinfoil/Lithium ：http://tinfoil.io/Download
+nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
 NHSE动森存档修改器：https://github.com/kwsch/NHSE
 
 es/fs插件：http://github.com/Joonie86/hekate/releases
@@ -20,7 +21,6 @@ Atomsphere大气层内核：http://github.com/Atmosphere-NX/Atmosphere/releases
 kosmos自制系统：http://github.com/AtlasNX/Kosmos/releases
 hekate注入bin文件：http://github.com/CTCaer/hekate/releases
 系统刷机有关：http://switchtools.sshnuke.net
-lithium/tinfoil：http://tinfoil.io/
 payload加载器：http://github.com/suchmememanyskill/Payload_Launcher/releases
 txos官网：http://sx.xecuter.com/（早先无需爬梯，现在必须扶墙）
 tx小组官网：http://team-xecuter.com/
