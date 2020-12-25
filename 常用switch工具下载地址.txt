@@ -11,6 +11,11 @@ Tinfoil/Lithium ：http://tinfoil.io/Download
 nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
 NHSE动森存档修改器：https://github.com/kwsch/NHSE
 
+XCI Download
+NXBREW: https://nxbrew.com/
+xciroms: https://xciroms.org/
+nsw2u(原switch-xci): https://nsw2u.com/
+
 es/fs插件：http://github.com/Joonie86/hekate/releases
 EdiZon金手指：http://github.com/WerWolv/EdiZon/releases
 Checkpoint存档管理器：http://github.com/FlagBrew/Checkpoint/releases
