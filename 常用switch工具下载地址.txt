@@ -10,7 +10,7 @@ haku33洗白软件：http://github.com/StarDustCFW/Haku33/releases
 Tinfoil/Lithium ：http://tinfoil.io/Download
 nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
 NHSE动森存档修改器：https://github.com/kwsch/NHSE
-
+EdiZon-SE: https://github.com/tomvita/EdiZon-SE/releases
 XCI Download
 NXBREW: https://nxbrew.com/
 xciroms: https://xciroms.org/
