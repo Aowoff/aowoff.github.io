@@ -9,6 +9,7 @@ Lockpick 导出keys：https://github.com/shchmue/Lockpick/releases
 haku33洗白软件：http://github.com/StarDustCFW/Haku33/releases
 Tinfoil/Lithium ：http://tinfoil.io/Download
 nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
+ns-usbloader：https://github.com/developersu/ns-usbloader/releases
 NHSE动森存档修改器：https://github.com/kwsch/NHSE
 EdiZon-SE: https://github.com/tomvita/EdiZon-SE/releases
 XCI Download
@@ -19,7 +20,7 @@ nsw2u(原switch-xci): https://nsw2u.com/
 es/fs插件：http://github.com/Joonie86/hekate/releases
 EdiZon金手指：http://github.com/WerWolv/EdiZon/releases
 Checkpoint存档管理器：http://github.com/FlagBrew/Checkpoint/releases
-goldleaf金叶子：http://github.com/XorTroll/Goldleaf/releases
+Goldleaf金叶子：http://github.com/XorTroll/Goldleaf/releases
 nxmtp直连电脑：http://github.com/liuervehc/nxmtp/releases
 主题软件：http://github.com/exelix11/SwitchThemeInjector/releases
 Atomsphere大气层内核：http://github.com/Atmosphere-NX/Atmosphere/releases
