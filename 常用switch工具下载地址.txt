@@ -11,6 +11,7 @@ Tinfoil/Lithium ：http://tinfoil.io/Download
 nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
 ns-usbloader：https://github.com/developersu/ns-usbloader/releases
 NHSE动森存档修改器：https://github.com/kwsch/NHSE
+动森设计编辑器：ACNHDesignPatternEditor: https://github.com/FluffyFishGames/ACNHDesignPatternEditor
 EdiZon-SE: https://github.com/tomvita/EdiZon-SE/releases
 XCI Download
 NXBREW: https://nxbrew.com/
