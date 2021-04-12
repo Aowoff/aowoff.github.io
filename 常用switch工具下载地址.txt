@@ -5,7 +5,7 @@ NX-Shell文件管理器：https://github.com/joel16/NX-Shell/releases
 Homebrew App Store自制软件商店：http://www.switchbru.com/appstore/
 linkalho离线链接账户：https://github.com/rdmrocha/linkalho/releases
 awoo installer：http://github.com/Huntereb/Awoo-Installer/releases
-Lockpick 导出keys：https://github.com/shchmue/Lockpick/releases
+Lockpick_RCM 导出keys：https://github.com/shchmue/Lockpick_RCM/releases
 haku33洗白软件：http://github.com/StarDustCFW/Haku33/releases
 Tinfoil/Lithium ：http://tinfoil.io/Download
 nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
