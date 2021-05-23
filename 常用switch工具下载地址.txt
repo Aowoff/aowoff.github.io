@@ -3,12 +3,12 @@ JKSV存档管理器：https://github.com/J-D-K/JKSV/releases
 DBI：https://github.com/rashevskyv/dbi/releases
 EdiZon-SE: https://github.com/tomvita/EdiZon-SE/releases
 Lockpick_RCM 导出keys：https://github.com/shchmue/Lockpick_RCM/releases
-NX-Shell文件管理器：https://github.com/joel16/NX-Shell/releases
+NX-Shell(文件管理器)：https://github.com/joel16/NX-Shell/releases
 awoo installer：http://github.com/Huntereb/Awoo-Installer/releases
 nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
 ns-usbloader：https://github.com/developersu/ns-usbloader/releases
 Goldleaf金叶子：http://github.com/XorTroll/Goldleaf/releases
-记录游戏时间插件：https://github.com/tallbl0nde/NX-Activity-Log/releases
+NX-Activity-Log（记录游戏时间插件）：https://github.com/tallbl0nde/NX-Activity-Log/releases
 NHSE动森存档修改器：https://github.com/kwsch/NHSE
 动森设计编辑器：ACNHDesignPatternEditor: https://github.com/FluffyFishGames/ACNHDesignPatternEditor
 动森梦境导出工具：https://github.com/Ixaruz/Luna/releases
@@ -20,6 +20,8 @@ nsw2u(原switch-xci): https://nsw2u.com/
 
 es/fs插件：http://github.com/Joonie86/hekate/releases
 Homebrew App Store自制软件商店：http://www.switchbru.com/appstore/
+aio-switch-updater：https://github.com/HamletDuFromage/aio-switch-updater/releases
+ldn_mitm(Switch联机工具)：https://github.com/spacemeowx2/ldn_mitm/releases
 linkalho离线链接账户：https://github.com/rdmrocha/linkalho/releases
 haku33洗白软件：http://github.com/StarDustCFW/Haku33/releases
 Tinfoil/Lithium ：http://tinfoil.io/Download
