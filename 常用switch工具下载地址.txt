@@ -2,6 +2,7 @@
 JKSV存档管理器：https://github.com/J-D-K/JKSV/releases
 DBI：https://github.com/rashevskyv/dbi/releases
 EdiZon-SE: https://github.com/tomvita/EdiZon-SE/releases
+Breeze-Beta: https://github.com/tomvita/Breeze-Beta/releases
 Lockpick_RCM 导出keys：https://github.com/shchmue/Lockpick_RCM/releases
 NX-Shell(文件管理器)：https://github.com/joel16/NX-Shell/releases
 awoo installer：http://github.com/Huntereb/Awoo-Installer/releases
