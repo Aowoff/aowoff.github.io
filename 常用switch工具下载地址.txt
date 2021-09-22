@@ -9,10 +9,10 @@ awoo installer：http://github.com/Huntereb/Awoo-Installer/releases
 nxdumptool：https://github.com/DarkMatterCore/nxdumptool/releases
 ns-usbloader：https://github.com/developersu/ns-usbloader/releases
 Goldleaf金叶子：http://github.com/XorTroll/Goldleaf/releases
-NX-Activity-Log（记录游戏时间插件）：https://github.com/tallbl0nde/NX-Activity-Log/releases
+NX-Activity-Log（查看详细游戏时间插件）：https://github.com/tallbl0nde/NX-Activity-Log/releases
 NHSE动森存档修改器：https://github.com/kwsch/NHSE
 动森设计编辑器：ACNHDesignPatternEditor: https://github.com/FluffyFishGames/ACNHDesignPatternEditor
-动森梦境导出工具：https://github.com/Ixaruz/Luna/releases
+动森梦境导出插件：https://github.com/Ixaruz/Luna/releases
 
 XCI Download
 NXBREW: https://nxbrew.com/
