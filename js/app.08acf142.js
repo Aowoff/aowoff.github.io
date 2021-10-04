@@ -397,7 +397,7 @@
                 return a("div", {staticClass: "footer"}, [a("span", {staticClass: "scroll"}), a("el-divider"), e._m(0), a("br"), a("span", {staticClass: "copyright"}, [e._v("Power by Vercel and Element")])], 1)
             }, b = [function () {
                 var e = this, t = e.$createElement, a = e._self._c || t;
-                return a("span", {staticClass: "copyright"}, [e._v("描述取自于"), a("a", {attrs: {href: "https://www.91wii.com/"}}, [e._v("91wii")]), e._v("@"), a("a", {attrs: {href: "https://www.91wii.com/space-uid-2411796.html"}}, [e._v("bzdfz")])])
+                return a("span", {staticClass: "copyright"}, [e._v("描述取自于"), a("a", {attrs: {href: "./数量关系.html"}}, [e._v("91wii")]), e._v("@"), a("a", {attrs: {href: "./常用switch工具下载地址.txt"}}, [e._v("bzdfz")])])
             }], p = {
                 name: "Footer", data: function () {
                     return {drawer: !1, direction: "btt"}
