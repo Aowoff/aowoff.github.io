@@ -1,0 +1,598 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+
+</style><title>图形推理</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='图形推理'><span>图形推理</span></h1><h2 id='命题形式'><span>命题形式</span></h2><h3 id='常视命题形式'><span>常视命题形式</span></h3><ul><li><p><span>一条式</span></p><ul><li><p><span>观察方向：从左到右观察</span></p></li><li><p><span>解题方法</span></p><ul><li><span>从左至右依次观察</span></li><li><span>奇偶观察</span></li><li><span>两两分组观察</span></li></ul></li></ul></li><li><p><span>两段式</span>–<span>观察思维</span></p><ul><li><span>先左后右顺序规察（第一段找规律，第二段最大程度应用规律）</span></li><li><span>两组一一比对（左段第一个图形和右段第一个图形比对，第二个图形和第二个图形做比对，依次类推）</span></li></ul></li><li><p><span>九宫格式</span>–<span>观察思维</span></p><ul><li><span>横行观察</span></li><li><span>竖列观察</span></li><li><span>米字型观察</span></li></ul></li><li><p><span>分组分类</span></p><ul><li><span>观察思维：先找共性，再找差异</span></li><li><span>注意事项：优选所分两组各有共同点的选项</span></li></ul></li></ul><h3 id='特珠命题形式'><span>特珠命题形式</span></h3><ul><li><p><span>差异式</span></p><ul><li><span>寻找和其他图形不同的图形</span></li></ul></li><li><p><span>金字塔式</span></p><ul><li><span>观察思维：从下往上观察，从底部开始，两两图形结合</span></li></ul></li><li><p><span>田字格</span></p><ul><li><span>横行观察</span></li><li><span>竖列观察</span></li></ul></li><li><p><span>填入式</span></p><ul><li><span>一段图形中，在中间有部分图形缺失</span></li></ul></li></ul><h2 id='位置类规律'><span>位置类规律</span></h2><h3 id='动态位置'><span>动态位置</span></h3><ul><li><p><span>图形特征：图形元素相同</span></p></li><li><p><span>考查考点</span></p><ul><li><p><span>平移</span></p><ul><li><span>图形特征：元素相同，有格有框</span></li><li><span>方向：上下、左右、顺逆时针、对角线</span></li><li><span>步频：恒等、等差、周期</span></li><li><span>方式：循环、反弹</span></li></ul></li><li><p><span>转动</span></p><ul><li><p><span>旋转</span></p><ul><li><span>图形特征：元素相同，结构一致</span></li><li><span>方向：顺、逆时针</span></li><li><span>角度：恒等、等差、周期</span></li><li><span>常考角度：45°、90°、135°等</span></li><li><span>全部由直线构成的图形也可能考察一个图形的全部线段都旋转一个角度后得到下一个图形</span></li></ul></li><li><p><span>翻转</span></p><ul><li><span>图形特征：元素相同，结构一致，并且两两比对，图形呈现对称状态</span></li><li><span>对称方式：横向、纵向、斜向</span></li></ul></li><li><p><span>旋转与翻转区分：时针法</span></p></li></ul></li></ul></li></ul><h3 id='静态位置'><span>静态位置</span></h3><ul><li><p><span>图形特征：图形结构相似</span></p></li><li><p><span>考查考点</span></p><ul><li><p><span>方位： 上下、左右、内外、前后</span></p></li><li><p><span>结构</span></p><ul><li><p><span>不同图形</span></p><ul><li><p><span>包含</span></p></li><li><p><span>相交</span></p><ul><li><span>直曲交</span></li><li><span>直直交</span></li><li><span>曲曲交</span></li><li><span>相交部分形状</span></li><li><span>相交部分线条数量</span></li></ul></li><li><p><span>相切</span></p><ul><li><span>内切（也考公共边数量，两条公共边构成的角度）</span></li><li><span>外切</span></li></ul></li><li><p><span>外离</span></p></li></ul></li><li><p><span>相同图形</span></p><ul><li><span>相邻</span></li><li><span>相隔</span></li><li><span>对角线相对</span></li></ul></li></ul></li><li><p><span>连接</span></p><ul><li><p><span>点连接</span></p></li><li><p><span>线连接</span></p><ul><li><span>重合线条长短</span></li><li><span>重合线条直曲</span></li><li><span>重合线全部重合或局部重合</span></li><li><span>重合线条数量</span></li></ul></li></ul></li></ul></li></ul><h2 id='样式类规律'><span>样式类规律</span></h2><h3 id='遍历'><span>遍历</span></h3><ul><li><p><span>图形特征</span></p><ul><li><span>每行（列）整体元素组成相同，排列组合次序不同</span></li><li><span>命题形式多为九宫格或两段式</span></li></ul></li><li><p><span>考点</span></p><ul><li><span>元素种类及元素数量遍历</span></li><li><span>技巧：缺啥补啥</span></li></ul></li></ul><h3 id='运算'><span>运算</span></h3><ul><li><p><span>命题形式：多为两段式或者九宫格式</span></p></li><li><p><span>叠加</span></p><ul><li><span>图形特征：第三幅图元素或线条最多，并且完全包含前两幅图</span></li><li><span>解题技巧：前两幅图所有线条都要出现，关注叠加的位置及叠加方式（镂空或者遮盖）</span></li><li><span>可以叠加后旋转，也可以旋转后叠加</span></li></ul></li><li><p><span>定义叠加</span></p><ul><li><span>特征：图形轮廓相同，但相同位置上填充的元素不同</span></li><li><span>填充元素：黑自、元素</span></li><li><span>解题技巧：观察相同位置上图形填充元素的变化</span></li></ul></li><li><p><span>相减</span></p></li><li><p><span>求同</span></p><ul><li><p><span>图形特征：图形两两之间比对，线条有同有异</span></p></li><li><p><span>考点</span></p><ul><li><span>去异求同</span></li><li><span>相邻求同</span></li><li><span>整体求同</span></li></ul></li></ul></li><li><p><span>求异</span></p><ul><li><span>图形特征：图形两两之间比对，线条有同有异</span></li><li><span>考点：去同求异</span></li></ul></li></ul><h2 id='数量类规律'><span>数量类规律</span></h2><p><span>黑白灰色块可能考查不同色块的数量，形状可以不同</span></p><h3 id='题型特征图形元素不同'><span>题型特征：图形元素不同</span></h3><h3 id='数量规律'><span>数量规律</span></h3><ul><li><span>数列类规律：常数、等差、周期、乱序、对称、奇偶</span></li><li><span>运算类规律：加、减、乘、除</span></li></ul><h3 id='考查考点'><span>考查考点</span></h3><ul><li><h4 id='点'><span>点</span></h4><ul><li><p><span>图形特征：T、X、L型线条相交特征居多</span></p></li><li><p><span>基础考点</span></p><ul><li><span>交点</span></li><li><span>切点</span></li><li><span>出头点（端点）</span></li></ul></li><li><p><span>细分考点</span></p><ul><li><p><span>构成元素：曲直交点、直直交点、曲曲交点</span></p></li><li><p><span>结构：内部交点、外部交点、轮廊的交点</span></p><ul><li><span>图形内部与图形外部交点的数量、移动的方向</span></li></ul></li></ul></li></ul></li><li><h4 id='线'><span>线</span></h4><ul><li><p><span>图形特征：线条共性特征明显</span></p></li><li><p><span>基础考点</span></p><ul><li><span>直线（直线和曲线互相连接为一条长线的图形注意起点线段与终点线段的夹角）</span></li><li><span>曲线（也考两条曲线之间的直线数）</span></li><li><span>笔画数</span>–<span>特征图：线段出头</span></li><li><span>汉字笔划数</span></li></ul></li><li><p><span>细分考点</span></p><ul><li><span>分形式：横线、斜线、竖线、线段、平行线</span></li><li><span>按结构：内外线</span></li></ul></li></ul></li><li><h4 id='角'><span>角</span></h4><ul><li><p><span>图形特征：图形缺角、锯齿状图形较多</span></p></li><li><p><span>基础考点：&lt;180°</span></p></li><li><p><span>细分考点</span></p><ul><li><span>锐角</span></li><li><span>直角（常考直角个数）</span></li><li><span>钝角</span></li></ul></li></ul></li><li><h4 id='面'><span>面</span></h4><ul><li><p><span>图形特征：整体封闭面较多</span></p></li><li><p><span>基础考点：面数量</span></p><ul><li><span>可能考查图形中三角形/四边形的数量</span></li><li><span>可能考查三角形与四边形数量的差值</span></li><li><span>相同形状的面的数量</span></li><li><span>都是正三角形的注意正立的正三角形与倒立的正三角形的数量</span></li><li><span>分内外圈的内外圈分开数</span></li><li><span>结合（外边框）交点数、线数一起考</span></li></ul></li><li><p><span>细分考点</span></p><ul><li><span>面形状</span></li><li><span>面积</span></li></ul></li></ul></li><li><h4 id='素'><span>素</span></h4><ul><li><p><span>图形特征：图形由小元素构成</span></p></li><li><p><span>基础考点</span></p><ul><li><span>种类数</span></li><li><span>个数</span></li><li><span>部分数</span></li></ul></li><li><p><span>特珠考点</span></p><ul><li><span>考点综合</span></li><li><span>元素换算</span></li></ul></li></ul></li></ul><h2 id='属性类规律'><span>属性类规律</span></h2><h3 id='题型特征图形元素不同属性共性明显'><span>题型特征：图形元素不同，属性共性明显</span></h3><h3 id='基础考点-1'><span>基础考点</span></h3><ul><li><h4 id='对称性'><span>对称性</span></h4><ul><li><p><span>轴对称</span></p><ul><li><p><span>对称轴方向</span></p><ul><li><span>横向、竖向、斜向，关注对称轴的旋转角度及方向</span></li><li><span>多个图形对称轴之间的关系：垂直、平行、相交</span></li></ul></li><li><p><span>对称轴数量</span></p><ul><li><span>九宫格中两个图形的数量相加等于第三个图形</span></li></ul></li><li><p><span>对称轴和图形之间的关系</span></p><ul><li><span>有线条与对称轴重合或者垂直</span></li><li><span>对称轴经过的交点/线条的数量</span></li></ul></li></ul></li><li><p><span>中心对称</span></p></li><li><p><span>全对称：既是中心又是轴对称</span></p></li><li><p><span>局部图形的对称</span></p></li></ul></li><li><h4 id='曲直性'><span>曲直性</span></h4><ul><li><span>全曲</span></li><li><span>全直</span></li><li><span>曲 + 直</span></li></ul></li><li><h4 id='封闭性'><span>封闭性</span></h4><ul><li><span>全封闭</span></li><li><span>半封闭</span></li><li><span>开放</span></li></ul></li></ul><h3 id='补充考点--凹凸性'><span>补充考点</span>–<span>凹凸性</span></h3><ul><li><span>凹图形：封闭图形边缘线条上任意两点之间的连线，可能在图形外部</span></li><li><span>凸图形：封闭图形边缘线条上任意两点之间的连线，均在图形内部</span></li></ul><h2 id='功能类图形'><span>功能类图形</span></h2><h3 id='图形特征图形中有共性小元素●o←☆▢△'><span>图形特征：图形中有共性小元素：●O←☆▢△</span></h3><h3 id='基础考点-2'><span>基础考点</span></h3><ul><li><p><span>功能元素（队黑点为代表）</span></p><ul><li><p><span>出现形式：单点、双点、多点</span></p></li><li><p><span>基本考点</span></p><ul><li><p><span>标定位置</span></p><ul><li><span>图形外部：上、下、左、右</span></li><li><span>图形边框</span></li><li><span>图形内部空间</span></li></ul></li><li><p><span>标定样式</span></p><ul><li><span>点：交点、切点、曲直交点</span></li><li><span>线：长短边、曲直边，方向（注意点与线之间的位置）</span></li><li><span>角：直角、锐角、钝角、最大角、最小角</span></li><li><span>面：大小面、面形状</span></li></ul></li></ul></li></ul></li><li><p><span>功能箭头</span></p><ul><li><span>单/多箭头：看箭头指向的元素/方向</span></li><li><span>双箭头：箭头之间的关系（平行、垂直）</span></li></ul></li><li><p><span>功能线</span></p><ul><li><span>标记功能：位置、样式</span></li><li><span>指示方向：垂直、平行</span></li><li><span>连接功能：线两端连接元素的特点</span></li></ul></li></ul><h2 id='六面体'><span>六面体</span></h2><h3 id='出题形式拆纸盒折纸盒-1'><span>出题形式：拆纸盒、折纸盒</span></h3><h3 id='基础知识-1'><span>基础知识</span></h3><ul><li><p><span>相对面</span></p><ul><li><span>平面展开图中识别方法：相间排列、</span>“<span>Z</span>”<span>字两端</span></li><li><span>立体图形中特性：在立体图中能且只能见到相对面中的一个面</span></li></ul></li><li><p><span>相邻面</span></p><ul><li><p><span>识别方法</span></p><ul><li><span>不相对，即相邻</span></li><li><span>两个面有边互相垂直，则这两个面为相邻面</span></li><li><span>一列（行）四个面，首尾两个面相邻</span></li></ul></li><li><p><span>特性</span></p><ul><li><span>相邻面相对位置不变</span></li><li><span>相邻面相对特征不变</span></li></ul></li></ul></li></ul><h3 id='解题方法-1'><span>解题方法</span></h3><ul><li><p><span>坐标法（箭头法）</span></p><ul><li><span>适用图形特征：六面体特征面方向性明显</span></li><li><span>方法：定位起点、终点，观察箭头上下左右的面特征及棱上特征</span></li></ul></li><li><p><span>双面箭头法</span></p><ul><li><span>适用图形特征：相邻面均为中心对称图形</span></li><li><span>方法：3个相邻面中，以其中一个面为起点画箭头指向另一个面，判断第3个面在箭头的左面或右面</span></li></ul></li><li><p><span>以点找线法</span></p><ul><li><span>适用图形特征：六面体特征面线条特征明显</span></li><li><span>方法：定位两个或者三个面的公共顶点和公共棱，观察特征</span></li></ul></li><li><p><span>定点描棱法</span></p><ul><li><span>适用图形特征：特征明显，能确定唯一顶点</span></li><li><span>方法：找准特征面特珠点，顺序（顺时针或者逆时针方向）描出四条棱，观察每个端点和每条棱的特征</span></li></ul></li></ul><h2 id='四面体'><span>四面体</span></h2><h3 id='出题形式拆纸盒折纸盒-2'><span>出题形式：拆纸盒、折纸盒</span></h3><h3 id='基础知识-2'><span>基础知识</span></h3><ul><li><p><span>2种平面展开图：正三角形、平行四边形</span></p></li><li><p><span>相邻面</span></p><ul><li><span>180°平角</span></li><li><span>平行四边形首尾面</span></li></ul></li></ul><h3 id='解题方法-2'><span>解题方法</span></h3><ul><li><span>公共棱</span></li><li><span>坐标法（箭头法）</span></li><li><span>以点找线法</span></li></ul><h2 id='八面体'><span>八面体</span></h2><h3 id='出题形式拆纸盒折纸盒-3'><span>出题形式：拆纸盒、折纸盒</span></h3><h3 id='基础知识-3'><span>基础知识</span></h3><ul><li><span>公共点：每个顶点连接4个面</span></li><li><span>相邻面：V型边</span></li></ul><h3 id='解题方法-3'><span>解题方法</span></h3><ul><li><span>坐标法（箭头法）</span></li><li><span>时针法</span></li><li><span>公共点法</span></li></ul><h2 id='截面图'><span>截面图</span></h2><h3 id='基础知识-4'><span>基础知识</span></h3><ul><li><span>概念：立体图形用刀截出的面的形状轮廊</span></li><li><span>注意事项：镂空位置戴面图要重点关注</span></li></ul><h3 id='基础图形'><span>基础图形</span></h3><ul><li><p><span>六面体</span></p><ul><li><span>锐角三角形（等边、等腰、不等边）</span></li><li><span>四边形（正方形、长方形、梯形、菱形、平行四边形）</span></li><li><span>五边形</span></li><li><span>六边形</span></li></ul></li><li><p><span>圆柱</span></p><ul><li><span>圆形</span></li><li><span>矩形</span></li><li><span>椭圆形</span></li><li><span>椭圆形的一部分</span></li></ul></li><li><p><span>圆维</span></p><ul><li><span>圆形</span></li><li><span>三角形</span></li><li><span>椭圆形</span></li><li><span>椭圆形的一部分</span></li><li><span>抛物线</span></li><li><span>双曲线</span></li></ul></li><li><p><span>三棱锥</span></p><ul><li><span>三角形</span></li><li><span>四边形（矩形、梯形、不规则四边形）</span></li></ul></li></ul><h3 id='考查形式-1'><span>考查形式</span></h3><ul><li><span>基础图形的拼合</span></li><li><span>基础图形的挖空</span></li></ul><h2 id='视图类'><span>视图类</span></h2><h3 id='基础知识-5'><span>基础知识</span></h3><ul><li><p><span>梳念</span></p><ul><li><span>立体图形和平面投影图之间的对应</span></li><li><span>正视图、侧视图、俯视图</span></li></ul></li><li><p><span>解题原则</span></p><ul><li><span>有分界线的，需保留分界线</span></li><li><span>没有分界线的，不能添加</span></li><li><span>虚线指被挡住的线</span></li><li><span>多个立体图形的，根据前后遮挡顺序进行观察</span></li></ul></li></ul><h3 id='基本元素六面体圆柱圆锥四面体等'><span>基本元素：六面体、圆柱、圆锥、四面体等</span></h3><h3 id='考查形式-2'><span>考查形式</span></h3><ul><li><span>多种基本元素组合</span></li><li><span>图形的切割：孔、槽、斜面</span></li></ul><h2 id='图形拼合类'><span>图形拼合类</span></h2><h3 id='平面图形拼合'><span>平面图形拼合</span></h3><ul><li><p><span>平面拼合</span></p><ul><li><p><span>命题形式：给出若干小图形，要求找出这些图形在不移动，不旋转的情况下拼出的完整图形的形状</span></p></li><li><p><span>解题技巧</span></p><ul><li><span>找特珠边或角</span></li><li><span>消去平行等长边</span></li><li><span>选项切割验证</span></li></ul></li></ul></li><li><p><span>平面重组</span></p><ul><li><p><span>命题形式：给出一个完整图形，要求找出和题干图形用相同元素拼合而成的图形，要求：可以移动、旋转、不能翻转</span></p></li><li><p><span>解题技巧</span></p><ul><li><span>数数量</span></li><li><span>时针法</span></li></ul></li></ul></li></ul><h3 id='立体图形拼合'><span>立体图形拼合</span></h3><ul><li><p><span>命题形式</span></p><ul><li><span>立体拼合</span></li><li><span>立体分割</span></li></ul></li><li><p><span>解题技巧</span></p><ul><li><span>比凹凸形状</span></li><li><span>比凹凸数量</span></li><li><span>比凹凸位置</span></li></ul></li></ul><p>&nbsp;</p></div></div>
+</body>
+</html>
