@@ -668,11 +668,12 @@
                     var e, t = this, a = v(this.tools);
                     try {
                         var r = function () {
+                            debugger;
                             var a = e.value;
                             window.console.log(a.name), s["default"].axios({
                                 url: a.api,
                                 method: "get",
-                                headers: {Authorization: "token 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"}
+                                headers: {Authorization: "token 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"}
                             }).then((function (e) {
                                 window.console.log(e.data.tag_name), t.tools[a.id].ver = e.data.tag_name;
                                 var s = d()(e.data.created_at).format("YYYY-MM-DD HH:mm");
