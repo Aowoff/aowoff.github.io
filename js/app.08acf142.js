@@ -625,13 +625,21 @@
                         }, {
                             id: "20",
                             name: "NHSE",
-                            url: "https://github.com/kwsch/NHSE/releases",
+                            url: "https://github.com/kwsch/NHSE",
                             api: "https://api.github.com/repos/kwsch/NHSE/releases/latest",
                             ver: "0.0.1",
                             created_at: "",
                             notic: "动森存档修改器"
                         }, {
                             id: "21",
+                            name: "ACNHPoker",
+                            url: "https://github.com/MyShiLingStar/ACNHPoker",
+                            api: "https://api.github.com/repos/MyShiLingStar/ACNHPoker/releases/latest",
+                            ver: "0.0.1",
+                            created_at: "",
+                            notic: "动森即时修改器"
+                        }, {
+                            id: "22",
                             name: "ACNHDesignPatternEditor",
                             url: "https://github.com/FluffyFishGames/ACNHDesignPatternEditor/releases",
                             api: "https://api.github.com/repos/FluffyFishGames/ACNHDesignPatternEditor/releases/latest",
@@ -639,7 +647,7 @@
                             created_at: "",
                             notic: "动森设计编辑器"
                         }, {
-                            id: "22",
+                            id: "23",
                             name: "Luna",
                             url: "https://github.com/Ixaruz/Luna/releases",
                             api: "https://api.github.com/repos/Ixaruz/Luna/releases/latest",
@@ -647,7 +655,7 @@
                             created_at: "",
                             notic: "动森梦境导出插件"
                         }, {
-                            id: "23",
+                            id: "24",
                             name: "linkalho",
                             url: "https://github.com/rdmrocha/linkalho/releases",
                             api: "https://api.github.com/repos/rdmrocha/linkalho/releases/latest",
@@ -664,7 +672,7 @@
                             window.console.log(a.name), s["default"].axios({
                                 url: a.api,
                                 method: "get",
-                                headers: {Authorization: "token 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"}
+                                headers: {Authorization: "token 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"}
                             }).then((function (e) {
                                 window.console.log(e.data.tag_name), t.tools[a.id].ver = e.data.tag_name;
                                 var s = d()(e.data.created_at).format("YYYY-MM-DD HH:mm");
