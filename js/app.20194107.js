@@ -672,7 +672,7 @@
                             window.console.log(a.name), s["default"].axios({
                                 url: a.api,
                                 method: "get",
-                                headers: {Authorization: "token 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"}
+                                headers: {Authorization: "token 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"}
                             }).then((function (e) {
                                 window.console.log(e.data.tag_name), t.tools[a.id].ver = e.data.tag_name;
                                 var s = d()(e.data.created_at).format("YYYY-MM-DD HH:mm");
