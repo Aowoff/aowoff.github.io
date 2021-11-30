@@ -668,12 +668,11 @@
                     var e, t = this, a = v(this.tools);
                     try {
                         var r = function () {
-                            debugger;
                             var a = e.value;
                             window.console.log(a.name), s["default"].axios({
                                 url: a.api,
                                 method: "get",
-                                headers: {Authorization: "token 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"}
+                                headers: {Authorization: "token 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"}
                             }).then((function (e) {
                                 window.console.log(e.data.tag_name), t.tools[a.id].ver = e.data.tag_name;
                                 var s = d()(e.data.created_at).format("YYYY-MM-DD HH:mm");
@@ -691,13 +690,13 @@
                         window.open(e, "_blank")
                     }
                 }
-            }, k = _, S = Object(j["a"])(k, i, l, !1, null, "2b6753ce", null), z = S.exports,
+            }, k = _, S = Object(j["a"])(k, i, l, !1, null, "47858640", null), z = S.exports,
             x = {name: "app", components: {HelloWorld: z}}, O = x,
-            A = (a("034f"), Object(j["a"])(O, o, c, !1, null, null, null)), D = A.exports, N = a("bc3a"), I = a.n(N),
+            D = (a("034f"), Object(j["a"])(O, o, c, !1, null, null, null)), N = D.exports, A = a("bc3a"), I = a.n(A),
             C = a("2106"), E = a.n(C);
         s["default"].config.productionTip = !1, s["default"].use(n.a), s["default"].use(E.a, I.a), new s["default"]({
             render: function (e) {
-                return e(D)
+                return e(N)
             }
         }).$mount("#app")
     }, "64a9": function (e, t, a) {
@@ -710,4 +709,4 @@
         a("9d9f")
     }
 });
-//# sourceMappingURL=app.08acf142.js.map123
+//# sourceMappingURL=app.20194107.js.map
